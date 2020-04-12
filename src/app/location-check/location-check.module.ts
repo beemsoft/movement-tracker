@@ -4,6 +4,7 @@ import { LabelService } from "../shared/services/label.service";
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { LocationCheckComponent } from './location-check.component';
+import { LabelPipe } from '../pipes/label.pipe';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { LocationCheckComponent } from './location-check.component';
     MatTableModule
   ],
   declarations: [
-    LocationCheckComponent
+    LocationCheckComponent,
+    LabelPipe
   ],
   exports: [LocationCheckComponent],
   providers: [
