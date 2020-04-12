@@ -51,6 +51,7 @@ export class LocationCheckComponent {
         move.latitude = this.latitude;
         move.longitude = this.longitude;
         this.moves.push(move);
+        this.latestMove = move;
       }
     } else {
       let move = new Move();
