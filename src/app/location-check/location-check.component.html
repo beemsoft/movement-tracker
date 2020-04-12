@@ -1,0 +1,15 @@
+<h1>Location check</h1>
+<button (click)="geoFindMe()">Get your location info</button>
+<p>
+    {{ status }}
+</p>
+<a href="{{mapLink}}" target="_blank">{{ mapLinkDescr }}</a>
+
+
+<button (click)="startTracking()">Start tracking</button>
+<button (click)="stopTracking()">Stop tracking</button>
+<ul>
+<li *ngFor="let move of moves">
+    {{ move.latitude }} - {{ move.longitude }} ( {{ move.moveTime }} )
+</li>
+</ul>
