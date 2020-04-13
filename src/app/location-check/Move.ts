@@ -5,4 +5,5 @@ export class Move {
   latitude: string;
   longitude: string;
   moveTime: moment.Moment;
+  distance: any;
 }

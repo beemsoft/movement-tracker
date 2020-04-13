@@ -43,13 +43,13 @@ export class LocationCheckComponent {
     this.longitude = position.coords.longitude;
     if (this.latestMove) {
       const distance = this.measure(this.latitude, this.longitude, this.latestMove.latitude, this.latestMove.longitude);
-      console.log('Distance: ' + distance);
-      if (distance > 5) {
+      if (distance > 2) {
         let move = new Move();
         move.id = "uuid";
         move.moveTime = moment().locale('nl');
         move.latitude = this.latitude;
         move.longitude = this.longitude;
+        move.distance = distance;
         this.moves.push(move);
         this.latestMove = move;
       }
@@ -59,6 +59,7 @@ export class LocationCheckComponent {
       move.moveTime = moment().locale('nl');
       move.latitude = this.latitude;
       move.longitude = this.longitude;
+      move.distance = 0;
       this.moves.push(move);
       this.latestMove = move;
     }

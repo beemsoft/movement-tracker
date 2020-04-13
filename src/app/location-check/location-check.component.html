@@ -12,6 +12,6 @@
 <button (click)="stopTracking()">Stop met traceren</button>
 <ul>
 <li *ngFor="let move of moves">
-    {{ move.latitude }} - {{ move.longitude }} ( {{ move.moveTime }} )
+    {{ move.latitude }} - {{ move.longitude }} ({{ move.moveTime }}) ({{ move.distance }}m)
 </li>
 </ul>
