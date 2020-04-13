@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from '@angular/common/http';
 import { APP_BASE_HREF } from '@angular/common';
-import { LoginComponent } from "./login/login.component";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatPaginatorModule } from "@angular/material/paginator";
@@ -35,8 +34,7 @@ import { LocationCheckModule } from './location-check/location-check.module';
     LocationCheckModule
   ],
   declarations: [
-    AppComponent,
-    LoginComponent
+    AppComponent
   ],
   providers: [{
     provide: APP_BASE_HREF,
