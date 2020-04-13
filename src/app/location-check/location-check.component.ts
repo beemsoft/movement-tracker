@@ -77,9 +77,7 @@ export class LocationCheckComponent {
   }
 
   startTracking() {
-    console.log('start tracking');
     this.stopTrackingLoop = false;
-    console.log('check position');
     navigator.geolocation.getCurrentPosition(this.addPosition, this.error);
     this.trackPosition();
   }
@@ -87,10 +85,9 @@ export class LocationCheckComponent {
   trackPosition() {
     if (!this.stopTrackingLoop) {
       setTimeout(() => {
-        console.log('check position');
         navigator.geolocation.getCurrentPosition(this.addPosition, this.error);
         this.trackPosition();
-      }, 1 * 60 * 1000)
+      }, 5 * 1000)
     }
   }
 

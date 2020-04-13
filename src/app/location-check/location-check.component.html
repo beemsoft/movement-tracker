@@ -1,13 +1,15 @@
-<h1>Location check</h1>
-<button (click)="geoFindMe()">Get your location info</button>
+<h2>Verplaatsingen vastleggen</h2>
+<button (click)="geoFindMe()">Test: haal je huidige locatie op</button>
 <p>
     {{ status }}
 </p>
-<a href="{{mapLink}}" target="_blank">{{ mapLinkDescr }}</a>
+<div *ngIf="mapLink">
+    Bekijk in OpenStreetMap je huidige locatie:
+    <a href="{{mapLink}}" target="_blank">{{ mapLinkDescr }}</a>
+</div>
 
-
-<button (click)="startTracking()">Start tracking</button>
-<button (click)="stopTracking()">Stop tracking</button>
+<button (click)="startTracking()">Begin met traceren</button>
+<button (click)="stopTracking()">Stop met traceren</button>
 <ul>
 <li *ngFor="let move of moves">
     {{ move.latitude }} - {{ move.longitude }} ( {{ move.moveTime }} )
